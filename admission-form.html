@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Admission Form</title>
+  <link rel="stylesheet" href="admission-form.css">
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <h1>Student Admission Form</h1>
+      <p>Fill in your details to apply for the new academic year. Fields marked * are required.</p>
+    </header>
+
+    <form class="form" action="#" method="post">
+
+      <fieldset>
+        <legend>Personal details</legend>
+        <div class="grid">
+          <div class="field">
+            <label for="fullname">Full name *</label>
+            <input type="text" id="fullname" name="fullname" placeholder="As on your certificates" required>
+          </div>
+          <div class="field">
+            <label for="dob">Date of birth *</label>
+            <input type="date" id="dob" name="dob" required>
+          </div>
+          <div class="field">
+            <span class="label">Gender *</span>
+            <div class="choices">
+              <label><input type="radio" name="gender" value="male" required> Male</label>
+              <label><input type="radio" name="gender" value="female"> Female</label>
+              <label><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="guardian">Parent or guardian name *</label>
+            <input type="text" id="guardian" name="guardian" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact details</legend>
+        <div class="grid">
+          <div class="field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number *</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number" required>
+          </div>
+          <div class="field full">
+            <label for="address">Address *</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+          </div>
+          <div class="field">
+            <label for="city">City *</label>
+            <input type="text" id="city" name="city" required>
+          </div>
+          <div class="field">
+            <label for="pincode">Pincode *</label>
+            <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" maxlength="6" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Course details</legend>
+        <div class="grid">
+          <div class="field">
+            <label for="course">Course applying for *</label>
+            <select id="course" name="course" required>
+              <option value="" selected disabled>Select a course</option>
+              <option>BCA</option>
+              <option>B.Sc Computer Science</option>
+              <option>B.Com</option>
+              <option>BBA</option>
+              <option>B.A English</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="year">Admission year *</label>
+            <select id="year" name="year" required>
+              <option value="" selected disabled>Select year</option>
+              <option>2026</option>
+              <option>2027</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Previous education</legend>
+        <div class="grid">
+          <div class="field">
+            <label for="qualification">Last qualification *</label>
+            <select id="qualification" name="qualification" required>
+              <option value="" selected disabled>Select qualification</option>
+              <option>12th Standard</option>
+              <option>Diploma</option>
+              <option>Undergraduate degree</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="institution">School or college name *</label>
+            <input type="text" id="institution" name="institution" required>
+          </div>
+          <div class="field">
+            <label for="passyear">Year of passing *</label>
+            <input type="number" id="passyear" name="passyear" min="2000" max="2026" required>
+          </div>
+          <div class="field">
+            <label for="percentage">Percentage or CGPA *</label>
+            <input type="number" id="percentage" name="percentage" min="0" max="100" step="0.01" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Documents and declaration</legend>
+        <div class="grid">
+          <div class="field">
+            <label for="photo">Passport-size photo *</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+          </div>
+          <div class="field">
+            <label for="marksheet">Last marksheet (PDF) *</label>
+            <input type="file" id="marksheet" name="marksheet" accept=".pdf" required>
+          </div>
+          <div class="field full">
+            <label class="check">
+              <input type="checkbox" name="declaration" required>
+              I confirm that the details above are correct.
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="reset" class="btn btn-ghost">Clear form</button>
+        <button type="submit" class="btn btn-primary">Submit application</button>
+      </div>
+
+    </form>
+  </main>
+</body>
+</html>
